@@ -7,4 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 product = Product.new({ name: "Sample1", price: 100, image_url: "https://avatars.githubusercontent.com/u/137811720?v=4", description: "This is a sample product." })
+product = Product.new({ name: "Sample2", price: 110, image_url: "https://avatars.githubusercontent.com/u/137811720?v=4", description: "This is a sample product." })
+product = Product.new({ name: "Sample3", price: 120, image_url: "https://avatars.githubusercontent.com/u/137811720?v=4", description: "This is a sample product." })
 product.save
