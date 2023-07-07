@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def one_product
-    @product = Product.first
+    @product = Product.find_by(id: params["id"])
     #render json: { product: @product }
     render template: "products/show"
   end
