@@ -12,7 +12,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(name: "SamplePOST", price: 999, image_url: "about:blank", description: "POST Sample")
+    @product = Product.create(
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"],
+    )
     render :show
   end
 end
