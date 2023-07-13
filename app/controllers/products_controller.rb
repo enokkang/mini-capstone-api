@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
       image_url: params["image_url"],
       description: params["description"],
       quantity: params["quantity"],
+      supplier_id: params["supplier_id"],
     )
     if @product.save #happy path
       render :show
@@ -34,6 +35,7 @@ class ProductsController < ApplicationController
       image_url: params["image_url"] || @product.image_url,
       description: params["description"] || @product.description,
       quantity: params["quantity"] || @product.quantity,
+      supplier_id: params["supplier_id"] || @product.supplier_id,
     )
     if @product.save #happy path
       render :show
