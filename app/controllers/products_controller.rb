@@ -19,9 +19,9 @@ class ProductsController < ApplicationController
       description: params["description"],
       quantity: params["quantity"],
     )
-    if @product.save
+    if @product.save #happy path
       render :show
-    else
+    else #sad path
       render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
     end
   end
@@ -35,9 +35,9 @@ class ProductsController < ApplicationController
       description: params["description"] || @product.description,
       quantity: params["quantity"] || @product.quantity,
     )
-    if @product.save
+    if @product.save #happy path
       render :show
-    else
+    else #sad path
       render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
     end
   end
