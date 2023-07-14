@@ -13,6 +13,7 @@ json.supplier product.supplier
 json.is_discount? product.is_discount?
 json.tax product.tax
 json.total product.total
+json.images product.images
 
 #json.extract! product, :id, :name, :price, :image_url, :description
 #shortcut!

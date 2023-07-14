@@ -29,6 +29,7 @@ class Product < ApplicationRecord
     Supplier.find_by(id: supplier_id)
   end
 
-  def image
+  def images
+    Image.where(product_id: url)
   end
 end
