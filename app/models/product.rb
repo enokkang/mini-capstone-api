@@ -3,8 +3,11 @@ class Product < ApplicationRecord
   validates :quantity, presence: true
   validates :quantity, numericality: { greater_than: 0 }
   validates :description, presence: true
-  validates :image_url, presence: true
+
   validates :name, presence: true
+
+  belongs_to :supplier
+  has_many :images
 
   def is_discount?
     #is_discount = false
@@ -25,11 +28,12 @@ class Product < ApplicationRecord
     (price + tax).round(3)
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  #  def supplier
+  #    Supplier.find_by(id: supplier_id)
+  #  end
 
-  def images
-    Image.where(product_id: url)
-  end
+  #def images
+  #  Image.where(product_id: id)
+  #end
+
 end

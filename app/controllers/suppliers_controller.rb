@@ -1,6 +1,6 @@
 class SuppliersController < ApplicationController
   def show
-    @supplier = Supplier.find_by(id: params["id"])
+    @supplier = Supplier.find_by(id: params[:id])
     #render json: { product: @product }
     render template: "suppliers/show"
   end
@@ -13,9 +13,9 @@ class SuppliersController < ApplicationController
 
   def create
     @supplier = Supplier.new(
-      name: params["name"],
-      email: params["email"],
-      phone_number: params["phone_number"],
+      name: params[:name],
+      email: params[:email],
+      phone_number: params[:phone_number],
     )
     if @supplier.save #happy path
       render :show
@@ -25,11 +25,11 @@ class SuppliersController < ApplicationController
   end
 
   def update
-    @supplier = Supplier.find_by(id: params["id"])
+    @supplier = Supplier.find_by(id: params[:id])
     @supplier.update(
-      name: params["name"] || @supplier.name,
-      email: params["email"] || @supplier.email,
-      phone_number: params["phone_number"] || @supplier.phone_number,
+      name: params[:name] || @supplier.name,
+      email: params[:email] || @supplier.email,
+      phone_number: params[:phone_number] || @supplier.phone_number,
     )
     if @supplier.save #happy path
       render :show
@@ -39,7 +39,7 @@ class SuppliersController < ApplicationController
   end
 
   def destroy
-    @supplier = Supplier.find_by(id: params["id"])
+    @supplier = Supplier.find_by(id: params[:id])
     @supplier.destroy
 
     render json: { message: "deleted!" }
