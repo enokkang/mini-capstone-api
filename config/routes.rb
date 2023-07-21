@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'images/Image'
+  get "images/Image"
   get "suppliers/Supplier"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -38,4 +38,20 @@ Rails.application.routes.draw do
   patch "/images/:id" => "images#update"
 
   delete "/images/:id" => "images#destroy"
+
+  #for users
+
+  post "/users" => "users#create"
+
+  #for sessions
+
+  post "/sessions" => "sessions#create"
+
+  #for orders
+
+  post "/orders" => "orders#create"
+
+  get "/orders" => "orders#index"
+
+  get "/orders/:id" => "orders#show"
 end
