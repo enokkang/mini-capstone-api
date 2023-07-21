@@ -1,13 +1,16 @@
 class Product < ApplicationRecord
-  validates :price, presence: true
-  validates :quantity, presence: true
-  validates :quantity, numericality: { greater_than: 0 }
-  validates :description, presence: true
+  #validates :price, presence: true
+  #validates :quantity, presence: true
+  #validates :quantity, numericality: { greater_than: 0 }
+  #validates :description, presence: true
 
-  validates :name, presence: true
+  #validates :name, presence: true
 
   belongs_to :supplier
   has_many :images
+  has_many :category_products
+  has_many :categories, through: :category_products
+  #has_many :carted_products
 
   def is_discount?
     #is_discount = false

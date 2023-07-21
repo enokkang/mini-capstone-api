@@ -1,5 +1,5 @@
 class Supplier < ApplicationRecord
-  validates :name, :email, :phone_number, presence: true
+  #validates :name, :email, :phone_number, presence: true
 
   has_many :products
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get "images/Image"
-  get "suppliers/Supplier"
+  #get "images/Image"
+  #get "suppliers/Supplier"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
