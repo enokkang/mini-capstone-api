@@ -1,6 +1,9 @@
 class Image < ApplicationRecord
-  belongs_to :product
-  # def images
-  #  Image.where(product_id: product_id)
-  #end
+  validates :url, presence: true
+
+  has_one :product
+
+  # def products
+  #   Product.where(image_id: id)
+  # end
 end
