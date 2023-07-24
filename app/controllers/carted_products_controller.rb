@@ -8,4 +8,9 @@ class CartedProductsController < ApplicationController
     )
     render :show
   end
+
+  def index
+    @carted_products = current_user.carted_products.where(status: "carted")
+    render :index
+  end
 end
