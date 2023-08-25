@@ -1,6 +1,6 @@
 User.create!([
-  { name: "EK", email: "ek@example.com", password_digest: "$2a$12$ggKAL0Ja.MbnZWP4OgQc4eBxBE6tE2CXxLw1Y7MgQoz0AYa/Bh.tW", admin: false },
-  { name: "admin", email: "admin@example.com", password_digest: "$2a$12$/urmKU1wb1TydNESDbXjbOkezpI734OXJ7FeYL7uHvephj89EbVUW", admin: true },
+  { name: "EK", email: "ek@example.com", password: "password", password_confirmation: "password", admin: false },
+  { name: "admin", email: "admin@example.com", password: "password", password_confirmation: "password", admin: true },
 ])
 Supplier.create!([
   { name: "Amazon", email: "amazon@example.com", phone_number: "18008008080" },
