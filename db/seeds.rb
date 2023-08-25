@@ -1,6 +1,6 @@
 User.create!([
-  { name: "Luna", email: "luna@example.com", password_digest: "$2a$12$ggKAL0Ja.MbnZWP4OgQc4eBxBE6tE2CXxLw1Y7MgQoz0AYa/Bh.tW", admin: false },
-  { name: "amanda", email: "amanda@example.com", password_digest: "$2a$12$/urmKU1wb1TydNESDbXjbOkezpI734OXJ7FeYL7uHvephj89EbVUW", admin: true },
+  { name: "EK", email: "ek@example.com", password_digest: "$2a$12$ggKAL0Ja.MbnZWP4OgQc4eBxBE6tE2CXxLw1Y7MgQoz0AYa/Bh.tW", admin: false },
+  { name: "admin", email: "admin@example.com", password_digest: "$2a$12$/urmKU1wb1TydNESDbXjbOkezpI734OXJ7FeYL7uHvephj89EbVUW", admin: true },
 ])
 Supplier.create!([
   { name: "Amazon", email: "amazon@example.com", phone_number: "18008008080" },
@@ -23,11 +23,11 @@ Product.create!([
   { name: "hello kitty rice cooker", price: "45.0", description: "it's cute and it cooks rice", quantity: nil, supplier_id: 2 },
 ])
 Order.create!([
-  { user_id: 1, product_id: 7, quantity: 10, subtotal: "10.0", tax: "1.0", total: "11.0" },
-  { user_id: 1, product_id: 7, quantity: 10, subtotal: "10.0", tax: "1.0", total: "11.0" },
-  { user_id: 1, product_id: 7, quantity: 10, subtotal: "10.0", tax: "1.0", total: "11.0" },
-  { user_id: 1, product_id: 7, quantity: 10, subtotal: "10.0", tax: "1.0", total: "11.0" },
-  { user_id: 1, product_id: 7, quantity: 10, subtotal: "1700.0", tax: "153.0", total: "1853.0" },
+  { user_id: 1, subtotal: "10.0", tax: "1.0", total: "11.0" },
+  { user_id: 1, subtotal: "10.0", tax: "1.0", total: "11.0" },
+  { user_id: 1, subtotal: "10.0", tax: "1.0", total: "11.0" },
+  { user_id: 1, subtotal: "10.0", tax: "1.0", total: "11.0" },
+  { user_id: 1, subtotal: "1700.0", tax: "153.0", total: "1853.0" },
 ])
 Image.create!([
   { url: "https://i.pinimg.com/236x/14/4a/0b/144a0bffe37f29f414e2dae2bd0141cf.jpg", product_id: 1 },
